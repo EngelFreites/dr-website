@@ -1,10 +1,9 @@
-
+import Hero from "./assets/components/Hero/Hero";
 
 function App() {
-
   return (
     <>
-      <h1 className="text-8xl">Hello Word!!</h1>
+      <Hero/>
     </>
   )
 }

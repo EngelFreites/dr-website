@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="h-screen w-full  relative">
       <img src="hero.jpg" alt="" className="h-full w-full object-cover" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/40">
+        <div className="max-w-7xl mx-auto flex flex-col item-center h-full justify-center ">
         <div>
           <h1 className=" text-8xl text-shadow font-bold p-4">
             Discover Your Natural Beauty

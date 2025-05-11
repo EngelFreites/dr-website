@@ -1,11 +1,13 @@
 import Hero from "./assets/components/Hero/Hero";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 function App() {
   return (
     <>
-      <Hero/>
+      <Hero />
+      <AboutUs />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

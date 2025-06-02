@@ -7,10 +7,10 @@ export default function Hero() {
       <section className="absolute inset-0  text-white bg-black/40">
         <div className="max-w-7xl mx-auto flex flex-col item-center h-full justify-center ">
           <div>
-            <h1 className=" text-8xl text-shadow font-bold p-4">
+            <h1 className=" text-6xl text-shadow font-bold p-4 text-center">
               Discover Your Natural Beauty
             </h1>
-            <p className=" text-4xl text-shadow  p-4">
+            <p className=" text-2xl text-shadow  p-4 text-center">
               {" "}
               Indulge in our premium beauty treatments designed to <br />
               rejuvenate your body and soul in a tranquil, luxurious <br />

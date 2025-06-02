@@ -24,7 +24,7 @@ export default function We() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
-            className="w-full flex flex-col items-center gap-12 lg:flex-row lg:justify-between"
+            className="w-full flex flex-col items-center gap-12 lg:flex-row lg:justify-center lg:gap-24 "
           >
             <div>
               <h1 className="text-6xl font-bold text-center p-4 text-[#bba98c]">
@@ -34,33 +34,33 @@ export default function We() {
                 {doctors[nextDr].description}
               </p>
             </div>
-            <div className=" rounded-lg relative">
+            <div className=" rounded-lg relative mt-8 ">
               <img
                 src={doctors[nextDr].photo}
-                className="h-[400px] md:h-[680px] rounded-lg z-15"
+                className="h-[200px] md:h-[500px] rounded-lg z-15"
                 alt={doctors[nextDr].name}
               />
-              <div className="h-22 w-22 bg-amber-200 rounded-md absolute -z-10 -top-8 -right-8"></div>
-              <div className="h-22 w-22 bg-amber-200 rounded-md absolute -z-10 -left-8 -bottom-8"></div>
+              <div className="h-14 w-14 bg-amber-200 rounded-md absolute -z-10 -top-4 -right-4"></div>
+              <div className="h-14 w-14 bg-amber-200 rounded-md absolute -z-10 -left-4 -bottom-4"></div>
             </div>
           </motion.div>
         </AnimatePresence>
       </div>
 
-      <div className="flex justify-center items-center gap-24 py-12">
+      <div className="flex justify-center items-center gap-24 py-4">
         <button
-          className=" h-20 w-20 bg-gray-200 rounded-full flex justify-center items-center"
+          className=" h-12 w-12 bg-gray-200 rounded-full flex justify-center items-center"
           onClick={handleBackDoctor}
         >
-          <IoIosArrowBack className="text-gray-700 cursor-pointer" size={48} />
+          <IoIosArrowBack className="text-gray-700 cursor-pointer" size={24} />
         </button>
         <button
-          className=" h-20 w-20 bg-gray-200 rounded-full flex justify-center items-center"
+          className=" h-12 w-12 bg-gray-200 rounded-full flex justify-center items-center"
           onClick={handleNextDoctor}
         >
           <IoIosArrowForward
             className="text-gray-700 cursor-pointer"
-            size={48}
+            size={24}
           />
         </button>
       </div>

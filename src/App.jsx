@@ -4,9 +4,11 @@ import Comments from "./components/Comments/Comments";
 import OurServices from "./components/OurServices/OurServices";
 import We from "./components/We/We";
 import Contact from "./components/Contact/Contact";
+import Header from "./components/Header/Header";
 function App() {
   return (
     <>
+      <Header />
       <Hero />
       <AboutUs />
       <OurServices />

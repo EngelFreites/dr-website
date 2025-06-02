@@ -1,4 +1,4 @@
-export const clientsCOmments = [
+export const clientsComments = [
   {
     username: "Julia",
     avatar:

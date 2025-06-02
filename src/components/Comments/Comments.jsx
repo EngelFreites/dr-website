@@ -1,11 +1,11 @@
-import { clientsCOmments } from "../../data/clientsComments";
+import { clientsComments } from "../../data/clientsComments";
 import { motion } from "framer-motion";
 
 export default function Comments() {
   return (
     <div className="bg-amber-100 w-full">
       <section className="max-w-7xl mx-auto py-12 flex flex-wrap justify-center items-start gap-8">
-        {clientsCOmments.map((comment, index) => (
+        {clientsComments.map((comment, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 40 }}

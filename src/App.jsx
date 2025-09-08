@@ -5,6 +5,7 @@ import OurServices from "./components/OurServices/OurServices";
 import We from "./components/We/We";
 import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
+import { Whatsapp } from "./components/Whatsapp/Whatsapp";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
       <We />
       <Comments />
       <Contact />
+      <Whatsapp />
     </>
   );
 }

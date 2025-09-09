@@ -6,9 +6,20 @@ import { useInView } from "react-intersection-observer";
 export default function OurServices() {
   const [visibleCount, setVisibleCount] = useState(3);
   const lastCardRef = useRef(null);
+  const sectionTopRef = useRef(null);
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 3);
+  };
+
+  const handleLoadLess = () => {
+    setVisibleCount(3);
+    if (sectionTopRef.current && visibleCount > OURSERVICES.length) {
+      sectionTopRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
   };
 
   useEffect(() => {
@@ -23,7 +34,7 @@ export default function OurServices() {
   const visibleServices = OURSERVICES.slice(0, visibleCount);
 
   return (
-    <section className="max-w-7xl mx-auto py-12 px-4">
+    <section ref={sectionTopRef} className="max-w-7xl mx-auto py-12 px-4">
       <h2 className="text-6xl font-bold text-center p-4 text-[#bba98c]">
         Our Services
       </h2>
@@ -54,6 +65,16 @@ export default function OurServices() {
           </button>
         </div>
       )}
+      {visibleCount > OURSERVICES.length && (
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={handleLoadLess}
+            className="bg-[#bba98c] hover:bg-[#a89375] text-white font-semibold px-6 py-2 rounded-lg transition-colors duration-300"
+          >
+            Load less
+          </button>
+        </div>   
+      )}
     </section>
   );
 }
@@ -78,6 +99,7 @@ function ServiceCard({ data, isLast, refCard }) {
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 0.6, ease: "easeOut" }}
+      exit={{opacity: 0, y: 50}}
       className="Card pt-12 w-full sm:w-[300px] flex flex-col"
     >
       <div className="relative">
